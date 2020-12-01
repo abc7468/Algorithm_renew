@@ -1,20 +1,23 @@
 #include<iostream>
-#include<vector>
-#include<algorithm>
-
 using namespace std;
 
-vector<int> v;
-
+float list[1001];
+float ans[1001];
 int main() {
-	int n; cin >> n;
-	for (int i = 0; i < n; i++) {
-		int a; cin >> a;
-		v.push_back(a);
+	int N; cin >> N;
+	
+	float big = 0;
+	float tmp = 0;
+	for (int i = 0; i < N; i++) {
+		cin >> list[i];
+		
+		if (big < list[i]) big = list[i];
 	}
-	sort(v.begin(), v.end());
-	for (int i = 0; i < n; i++) {
-		cout << v[i] << '\n';
+	for (int i = 0; i < N; i++) {
+		ans[i] = list[i] / big;
+		tmp += ans[i];
 	}
-	return 0;
+	cout << fixed;
+	cout.precision(6);
+	cout << (double)(tmp / N * 100);
 }
