@@ -1,12 +1,16 @@
 #include<iostream>
 #include<algorithm>
+#include<vector>
 using namespace std;
 
 int main() {
-	int a, b, c, d, e; cin >> a >> b >> c >> d >> e;
-	int ans;
-	
-	ans = min(a, min(b, c));
-	ans += min(d, e);
-	cout << ans - 50;
+	while (1) {
+		int n; cin >> n;
+		if (n == 0) {
+			return;
+		}
+		for (int i = 0; i < n; i++) {
+
+		}
+	}
 }
