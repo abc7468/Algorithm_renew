@@ -1,30 +1,33 @@
 #include<iostream>
-#include<algorithm>
 #include<string>
-#include<vector>
 using namespace std;
 
-vector <pair<int, string>> v;
-
-bool cmp(const pair<int, string> &a, const pair<int, string> &b) {
-	if (a.first == b.first) return a.second < b.second;
-	return a.first < b.first;
-}
-
 int main() {
-	int n; cin >> n;
-	for (int i = 0; i < n; i++) {
-		string a;
-		int b;
-		cin >> a;
-		b = a.size();
-		v.push_back(make_pair(b, a));
+	int N; cin >> N;
+
+	for (int i = 0; i < N; i++) {
+		int col, row, num; cin >> col >> row >> num;
+		int floor, ho;
+		string ho_ = "";
+		if (num%col == 0) {
+			floor = col;
+		}
+		else {
+			floor = num % col;
+		}
+		if (num%col == 0) {
+			ho = num / col;
+		}
+		else {
+			ho = (num / col) + 1;
+		}
+		if (ho / 10 == 0) {
+			ho_ = "0" + to_string(ho);
+		}
+		else {
+			ho_ = to_string(ho);
+		}
+		cout << floor << ho_ <<'\n';
 	}
-	sort(v.begin(), v.end(), cmp);
-	
-	v.erase(unique(v.begin(), v.end()), v.end());
-	int size = v.size();
-	for (int i = 0; i < size; i++) {
-		cout << v[i].second << '\n';
-	}
+	return 0;
 }
