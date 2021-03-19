@@ -138,9 +138,6 @@
     <ClCompile Include="13537.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="play.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1016.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -151,6 +148,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="12849.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문자열 압축.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1922.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="map 사용.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

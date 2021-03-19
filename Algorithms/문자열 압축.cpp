@@ -46,7 +46,7 @@ int solution(string s) {
 					v.clear();
 					count = 1;
 					break;
-				
+					
 				}
 
 			}
