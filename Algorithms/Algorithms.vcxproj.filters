@@ -159,22 +159,16 @@
     <ClCompile Include="map 사용.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="play.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="line3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="linetest1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="소스2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="14501.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1806.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1208.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1520.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
