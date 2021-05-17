@@ -171,5 +171,11 @@
     <ClCompile Include="1520.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="play.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1916.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
