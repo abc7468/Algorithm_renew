@@ -1,45 +1,26 @@
 #include<iostream>
-#include<algorithm>
 #include<vector>
 using namespace std;
-
-vector<pair<pair<int,int>, pair<int, int>>> map;
-
-bool cmp(pair<pair<int, int>, pair<int, int>> &a, pair<pair<int, int>, pair<int, int>> &b) {
-	if (a.first.first == b.first.first) {
-		return a.first.second > b.first.second;
-	}
-	return a.first.first > b.first.first;
-}
-
-bool getFirstLine(pair<pair<int, int>, pair<int, int>> &a, pair<pair<int, int>, pair<int, int>> &b) {
-	return a.second.first < b.second.first;
-}
+pair<int, int> people[50];
+vector<int> tmp;
 int main() {
 	int N; cin >> N;
+
 	for (int i = 0; i < N; i++) {
-		int weight, height; cin >> weight >> height;
-		map.push_back({ {weight, height},{i, 0} });
+		int w, h; cin >> w >> h;
+		people[i] = {w,h};
 	}
-	sort(map.begin(), map.end(), cmp);
-
-	map[0].second.second = 1;
-	int ki = map[0].first.second;
-	for (int i = 1; i < N; i++) {
-		if (map[i].first.second < ki) {
-			map[i].second.second = i+1;
-			ki = map[i].first.second;
-		}
-		else {
-			map[i].second.second = map[i - 1].second.second;
-
-		}
+	int rank = 1;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+			if (people[i].first < people[j].first && people[i].second < people[j].second)
+				rank++;
+		cout << rank << ' ';
+		rank = 1;
 	}
 
-	sort(map.begin(), map.end(), getFirstLine);
-	for (int i = 0; i < N; i++) {
-		cout << map[i].second.second<<' ';
-	}
+
 
 
 	return 0;
